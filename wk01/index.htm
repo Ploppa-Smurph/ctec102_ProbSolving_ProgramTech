@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Problem Solving and Programming Techniques week 01</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Problem Solving and Programming Techinques</h1>
+    <h3>Installing Python</h3> installed
+    <h3>Week01 part 01 video</h3> <a href="https://www.youtube.com/watch?v=8lcX9q0SiUs&list=PLLqJ8uvo5LV8L5-uCf41-aFGulVE8o5Dn&index=1">link to wk01 part 01</a>
+    <br>Python.org <a href="https://www.python.org/"> Python Official Website and Documentation</a>
+    <p>Python is a High-Level Language. </p><b>Key Words</b> are predefined words in a programming language <br><b>Operators</b> - perform operations on data (ex: "+", "-", "||")
+    <br><b>Syntax</b> - rules to be followed when writing code.<br><b>Statement</b> - individual instruction
+    <h3>Print statement</h3>print statements must have parentheses (), and the data to print must be in quotes ''.
+    <br> ex: <b>print('Hello Jerome')</b> in python will display Hello Jerome when run.
+    <h3>Program Development Cycle</h3>
+    <ol>
+        <li>Design Program</li>
+        <li>Write Code</li>
+        <li>Correct Syntax Errors</li>
+        <li>Test the Program</li>
+        <li>Correct Logic Errors</li>
+    </ol>
+    before we actually design the program we need to determine why we are making the program, and we also need to know what the final outcome we want from the project
+    <p><b>Design Process</b></p>
+    <ul>
+        <li>Understand the Task</li>
+        <ul>
+            <li>Software Requirements</li>
+            <li>"Interview the Customer"</li>
+        </ul>
+        <li>Determine the Steps</li>
+        <ul>
+            <li>Algorithms</li>
+        </ul>
+        <ul>
+            <li>Understand the Task</li>
+            <ul>
+                <li>Software Requirements</li>
+                <li>"Interview the Customer"</li>
+            </ul>
+        </ul>
+    </ul>
+    <h2>CODE</h2>
+    <ul>
+        <b>Syntax</b>
+        <li>each new line is a new instruction</li>
+        <li>spacing matters</li>
+    </ul>
+    <ul>
+        <b>Flow</b>
+        <li>Top to Bottom</li>
+    </ul>
+    <h4>Functions</h4>
+    <ul>
+        <li>Blocks of prewitten code</li>
+        <li>Can be named and reused</li>
+        <li>Can take input and return output</li>
+        <li>Where you find Functions</li>
+        <ul>
+            <li>Python includes built-in functions</li>
+            <li>You can use pre-built functions from other libraries</li>
+            <li>You write your own!</li>
+        </ul>
+        <li>Parts of a Function</li>
+        <ul>
+            <li>Definition</li>
+            <li>Arguments</li>
+            <li>Return Statement</li>
+        </ul>
+    </ul>
+    <b>print()</b> is an example of a function.
+    <p> you can print multiple items with one statement by using the "" and seperating with ,
+        <br>ex: <b>print("stamps","jars","finger holes")</b> each arguement is diplayed in the order they are passed to the function and items are automatically seperated by space when displayed.
+    </p>
+    <h4>Comments</h4>
+    Comments start with # in python. <br> ex: <b># this is a comment</b>
+    <p>
+        comments are ignored by the interpreter. Comments are useful for humans (including oneself).<br>comments normally are on their own line, or come after a line of code. you cannot have a comment in a string literal.
+    </p>
+    <h4>Variables</h4>
+    <b>Data Types</b>
+    <ul>
+        <li>int</li>
+        <li>float</li>
+        <li>str</li>
+    </ul>
+    <b>Static vs. Dynamic</b>
+    <b>Buckets</b>
+
+    <h3>Week 01 part 02</h3>
+    <a href="https://www.youtube.com/watch?v=oMxYTxsm6Jc&list=PLLqJ8uvo5LV8L5-uCf41-aFGulVE8o5Dn&index=2">link to 2nd video</a>
+    <p><b>Value Assignment with Variables</b> Variable = Expression -- the Variable is on the left of the = and the value is assigned on the right<br>
+        <br> ex: age = 22 (var age is assigned an int value of 22)
+        <br> name = 'Toby' (var name is assigned string value Toby) [you can tell it's a string because it's in quotes]
+        <br> x = 5 + 4 (var x is assigned the sum of 5 and 4)
+    </p>
+    <h4>Converting Values</h4>
+    if you have variable = 5.129 and convert from float to int then you lose all the data after the decimal, no rounding, it is just dropped and the whole # before the decimal is left.
+    <p>if variable = "5" {a string value} we must convert the string value to an int or float. you simply type: int(variable) </p>
+
+    <h4>Naming Variables</h4>
+    <ul>
+        <li>cannot be Python keyword</li>
+        <li>cannot contain spaces</li>
+        <li>1st letter must be letter or underscore (no numbers or symbols)</li>
+        <li>other characters must be letters, numbers, or underscores</li>
+        <li>case sensitive</li>
+        <li>name should reflect use</li>
+        <li>camelCase, snake_case, or PascalCase</li>
+    </ul>
+    <h4>Variable Reassignment</h4>
+    Variables in Python can reference different values while the program is running.
+    <br>ex: a=3<br>b=5<br>a=a+b<br>the new value of a has been set to 8
+    <p>worked on the convert.py simple program which dealt with user<b>input</b></p>
+    the program written is:<br> <b><i>number=float(input('enter a number'))
+        <br>print('your number plus 5 is ', number+5)</i></b><br><br> the program takes a user inputted # and adds 5 to it and outputs the sum. simple demo of manipulating input.
+    <h4> Nested Function</h4>
+    a nested function is a function contained within another function
+    <br> operators = tool to perform calculation
+    <br> operands = value the operator performs it's operation (addition, subtraction, ... ) on -- normally a number in math
+    <br> typically the result is stored as a variable to be called upon later
+    <h4>Python Math Operators</h4>
+    <ul>
+        <li>+ : addition</li>
+        <li>- : subtraction</li>
+        <li>* : multiplication</li>
+        <li>/ : division</li>
+        <li>// : int division (result is integer)</li>
+        <li>% : modulo (remainder of division) -- if remainder is even then value is even, if remainder is odd then value is odd</li>
+        <li>** : exponent {raises to the power of}</li>
+    </ul>
+    <h5>Please Excuse My Dear Aunt Sally</h5> the order of operations in Python
+    <ul>
+        <li>Parantheses ()</li>
+        <li>Exponents **</li>
+        <li>Multiplication *</li>
+        <li>Division /, int division //, and modulo % </li>
+        <li>Addition + </li>
+        <li>Subtraction - </li>
+    </ul>
+    <h4>end= and sep= Delimiter when printing</h4>
+    print() function creates a new line by default in Python we can use the end='' or end =' ' delimiter to overwrite that behavior.
+    <br>the sep='' delimiter is used the same way for spacing.
+    <h5> some additional Escape Characters</h5>
+    <ul>
+        <li>\n : cause output to advance to next line</li>
+        <li>\t : cause output to skip over to next horizontal tab position (tab right)</li>
+        <li>\' : print a ' (single quote)</li>
+        <li>\" : print a " (double quote)</li>
+        <li>\\ : print a \ (single backslash)</li>
+    </ul>
+    <h4>Concatenate</h4>
+    str + str ex: 'My dog is' + ' Gerald' or 'my dog is ' + dogName + ', you can pet it.'
+    <h3>format() the Format Function</h3>
+
+
+
+</body>
+
+</html>
