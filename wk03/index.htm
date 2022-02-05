@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 week 03 - Decision Structures and Boolean Logic</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Python Decision Structures and Boolean Logic</h1>
+    <a href="https://www.youtube.com/watch?v=UzdJusnhDZU&list=PLLqJ8uvo5LV-c0C7y21pp07CMNeiicEBC&index=2">link to wk02 pt01 video</a>
+    <ul><b>Topics for this Week</b>
+        <li>if Statement</li>
+        <li>if-else Statement</li>
+        <li>Comparing Strings</li>
+        <li>Nested Decision Structures and the if-elif-else Statement</li>
+        <li>Logical Operators</li>
+        <li>Boolean Variables</li>
+        <li>Turtle Graphics: Determining the State of the Turtle</li>
+    </ul>
+    <h2>The if Statement</h2>
+    -<b><u>Control Structure:</u></b> design that controls order in which set of statements execute -
+    <br>-<b><u>Sequence Structure:</u></b> set of statements that execute in the order they appear -
+    <br>-<b><u>Decision Structure:</u></b> specific action(s) performed only if a condition exist [aka Selection Structure]
+    <br><br> in Flowchart, Diamond represents True/False condition that must be tested.
+    <br> Actions can be conditionally executed (performed only when a condition is true).
+    <br> <b><u>Single Alternative Decision Structure</u></b> provides only one alternative path of execution.
+    <br> [if condition is NOT True {False}; then it will exit the structure]
+    <p>if --> Cold Outside --> True >> wear a coat, then exit this statement
+        <br> if --> Cold Outside --> False >> exit this statement
+        <pre>
+        <br><br> Python syntax:
+        <br> if <i>condition:</i>
+     <i>Statement</i>
+     <i>Statement</i>
+        </pre>
+        <br>Indentation is critical in python -- after the : you must indent on the next line.
+        <br><br> the first line is known as the 'if' clause:
+        <br>-includes keyword 'if' follwed by condition. the condition can be True or False.
+        <br><br>When the 'if' statement executes the condition is tested and if it is True the block statement is executed. otherwise, block statements are not executed.
+    </p>
+    <h2>Boolean Expressions and Relational Operators</h2>
+    <p>
+        <b>Boolean Expression:</b> tested by 'if' statement to determine whether the expression is True or False.
+        <br> ex: a > b -- will be True if a is greater than b, but False otherwise
+        <br><br><b>Rational Operator:</b> determines whether a specific relationship exists between 2 values -- ex: a value is greater than another
+        <br><br> >= and
+        <=- - greater than equal to or less than equal to, test more than one relationship -- if one of the values is correct then it will be True <br><br> == - operator determines whether two operands are equal to one another -- [the = is used to assign value to variables, so comparative 'equal' is ==]
+            <br><br> != - two operands are NOT equal to one another
+    </p>
+    see ex: <b><i>sales.py</i></b> in this folder (ctec102\wk03\)
+    <p>
+        <a href="https://www.youtube.com/watch?v=7ZcDPDuXlX4&list=PLLqJ8uvo5LV-c0C7y21pp07CMNeiicEBC&index=3">video part 02</a>
+        <br><br>Boolean Expressions and Relational Operators (cont'd)
+        <br> <b> Any relational operator can be used in a decision block</b>
+        <br> ex: if balance == 0
+        <br> ex: if payment != balance
+        <br><br> It is possible to have a block inside another block (nested)
+        <br> you can have an if statement inside a function; statements in the inner block must be indented in respect to the outer block
+    </p>
+    <h3>if-else Statement</h3> is a Dual alternative decision structure - 2 possible paths of execution
+    <br>the 'if' clause and the 'else' clause must be aligned, and both must be consistently indented
+    <br><br> work on the <b><i>sales.py</i></b> exercise and add an 'else' to the program.
+    <br><br> Comparing Strings --- it compares characters by what the value of the letter is (ascii or unicode) - ends up being the same as alphabetical order
+    <br> ex: 'a'
+    < 'b' would be True, 'd'> 'e' would be False.
+        <br> the Capital form of the letter will have a smaller value than the lower case letter, so 'N' > 'n' will be False
+        <h3>Nested Decision Structure</h3> the if-elif-else Statement Decision structures can be nested inside of another decision structure.
+        <br><br> this is commonly used in programs. ex: a loan program that determines if you get a loan based on:
+        <br>-- if you earn at least $30,000 / year
+        <br>-- if you have been employed at least 2 years
+        <br> only if both of those are true can you get the loan
+        <br><br> see ex: <b><i>loanPro.py</i></b>
+        <br> Proper Indentation is REQUIRED to run Python programs. it is required for the interpreter and makes the code easy to read.
+        <br><br> if-elif-else Statement -- makes the logic of nested decision structures simpler to write.
+        <br> ex: <pre>
+         if condition1:   
+             statement(s) 
+         elif condition2: 
+             statement(s)
+         elif condition3: 
+             statement(s)
+         else:
+             statement(s)                  
+</pre>>
+        <br><br>work on example program to check grades <b><i>grades.py</i></b>
+        <h3>Short-Circuit Evaluation [aka Cutoff]</h3> these determine the value of compound Boolean expressions after evaluating only one sub expression.
+        <br> performed by the 'or' and 'and' operators
+        <ul>
+            <li><b>'or' operator</b></li> if left operand is True then the expression is True, otherwise evaluate right operand
+            <li><b>'and' operator</b></li> if left operand is False then the expression is False, otherwise evaluate right operand
+        </ul>
+        <h4> Checking Numeric Ranges with Logical Operators</h4>
+        <h4>Boolean Varialbes </h4> are the <i><b>bool</b></i> data type and reference 2 values: True and False
+        <br> Boolean Variables are commonly used as a <b>Flag</b>. Flag variables signal when a condition exists in a program.
+        <h2>Week 03 part 03 video</h2>
+        <a href="https://www.youtube.com/watch?v=jNIJK_XBkF0&list=PLLqJ8uvo5LV-c0C7y21pp07CMNeiicEBC&index=4">part 03 video</a> starting with a program example - you can declare multiple variables in 1 line with commas: ex: <i>x,y,z=1,3,5</i>
+        <br><br>color mixing program example: <b>color.py</b>
+        <br><br>more complex example with <b>roulette.py</b>
+        <h2>part 04</h2>
+        <a href="https://www.youtube.com/watch?v=2hyNWr3g0OA&list=PLLqJ8uvo5LV-c0C7y21pp07CMNeiicEBC&index=5">Video part 04</a>
+        <br> working with the example <b>timeConversion.py</b>
+        <br><br> work on the <b>Game of Numbers</b> homework
+
+</body>
+
+</html>
