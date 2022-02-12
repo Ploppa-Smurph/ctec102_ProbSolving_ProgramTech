@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Wk04 Repetition Structures</title>
+</head>
+
+<body>
+    <h1>CTEC-102 wk04 Repetition Structures</h1>
+    <a href="https://www.youtube.com/watch?v=vqHrHuJQbq0">Link to Bill Barry Repetition Structures for Python</a>
+    <br><br> reviewing - types of repetition structures; running totals; sentinel values; input validation loops; nested loop
+    <h2>Types of Repetition Structures</h2>
+    in coding you often have to write code multiple times that perform the same task.
+    <br>this can make code overly Large, Time Consuming to write or edit, and may need correcting in more places.
+
+    <ul>
+        <li><b>while loops</b></li> - condition based, only stop when the condition is met. condition test is at top of structure
+        <br> while loops have 2 parts: they test a condition for True of False, as long as the condition is True the statement will repeat (loop)
+        <li><b>for loops</b></li> - counter (or collection-based), stops when the count is finished or all collection elements have been processed
+        <br>
+    </ul>
+    <h3>while loops</h3> will continue until something happens inside the loop to make the condition false
+    <br><b><i>while loops are also called pretest loops</i></b> you can test a condition before an iteration; ie the loop will not execute if a condition is False to start with
+    <h3>Infinite Loops</h3> loops must contain a way to terminate, in a while loop the condition must at some point become false for the program to terminate, otherwise the loop will continue to run.
+    <br><b>infinte loops</b> have NO way of stopping, it will repeat until the program is interrupted.
+    <h3>for Loop: Count-Controlled Loop</h3>
+    a count-controlled (for) loop iterates a specific number of times.
+    <br> for loops are designed to work with sequences of data items; it will iterate once for each item in the sequence
+    <br><br> super basic example: <i>for num in [1,2,3,4,5]: print(num)</i>
+    <br> this would print the first item in the array as the var 'num', and then iterate to the next 'num' in the sequence
+    <i>see easyFor.py</i> for working example
+    <h4>Range Function</h4> - the range function simplifies the process of writing a for loop
+    <br>Range returns and iterable object; meaning it returns an object that contains a sequence of values that can be iterated over
+    <br>if you use 1 argument with range it is the end limit; 2 arguments are the starting value and ending limit; 3 arguments, the 3rd argument acts as the 'step' value (count by that value)
+    <h4>Target Variable Inside the Loop</h4>
+    purpose of the Target Variable is to reference each item in a sequence as the loop iterates.
+    <br>the Target variable can be used in calculations or tasks in the body of the loop.
+    <h4>Letting the User Control the Loop Iterations</h4>
+    receive <b><i>Range</i></b> inputs from user, place them in variable and call the <b><i>Range</i></b> function in the 'for' clause using the variables
+    <h4>Generating Iterable Sequence that Ranges from Highest to Lowest</h4> - Range function can be used to generate a sequence with numbers in descending order:
+    <br><br>3 examples - fibonacci sequence; banner of asterisks, reverse characters in a string
+    <br>ex: Range (10, 0, -1)
+
+
+
+    <h2>Chapter 04 Video 02</h2>
+    <a href="https://www.youtube.com/watch?v=vz_j0wLN_ZE">Bill Barry video 02</a>
+    <h4>Calculating a Running Total</h4> calculating a total of a series of numbers.
+    <br> consist of 2 things - a loop that reads each number and the <b>Accumulator Variable</b>
+    <br> the accumulator variable keeps up with the total and references the accumulated total at the end of the loop
+    <br>Running Totals = create and 0 the total outside the loop and inside the loop add to the total variable each time
+    <br><br> in the example we will add up all the numbers between 1 and 100
+    <br>a <b>counter</b> is variable += 1
+    <br>an <b>accumulator</b> is a variable += something other than 1, can be a variable or some other figure
+    <h4>Augmented Assignment Operators</h4> shorthand operators, ex: += ; x+=5; equals x=x+5
+    <h3>Sentinels</h3> or Sentinel Values
+    <br> a value set as an agreed-upon value indicating something is finished
+    <br><br>loop lets you enter employee and work hourse until you provide emp# of '0000'
+    <br>or, the last record in the file contains the string 'StopHere!'
+    <br>or most common, a menu allows you to choose an exit option
+    <br><br> quick program with the employee # and hour ex. <b>hours.py</b> - that has running total and sentinel value
+    <h3>Input Validation Loops</h3>GIGO - if user provides bad input program will produce bad output standard in menus, trap the user until you get the data you require from them, like 'Q' for quit, or exit, and then confirm exit of program
+    <br><br> input validation - is commonly accomplished with a 'while' loop which repeats as long as the input is bad
+    <br><br><b>menu.py</b> is an example of the input validation loop
+    <h2>Chapter 04 Video 03</h2>
+    <a href="https://www.youtube.com/watch?v=RaYtVBjed2Q&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=13">Bill Barry Repetition Structures video 03 </a>
+    <h3>Nested Loops</h3>
+    loops in loops - if you think about it, the outside loop (or first loop) will be triggered more slowly, because the nested loop (or inside loop) is having to run more quickly
+    <br>slow loop on the outside and a quicker loop on the inside
+    <br><br> <b>multiplication.py</b> exercise - printing out a multiplication table for a child to study
+    <h2>Turtle Graphics: Drawing with Loops</h2>
+    -- use loops to draw simple and elaborate designs <b><i>turtle02.py</i></b> for the work
+    <h2>Repetition Structures - Supplemental (Using the String Format Method)</h2>
+    <a href="https://www.youtube.com/watch?v=ddCm7Xwicj8&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=14">Bill Barry Supplemental video String Format Method</a>
+    <br><br>
+
+
+
+</body>
+
+</html>
