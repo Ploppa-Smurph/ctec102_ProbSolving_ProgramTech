@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Chapter 5 Functions</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Chapter 5 Functions</h1>
+    <a href="https://www.youtube.com/watch?v=nRSP5rzkMlk&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1">link to video part 1</a> Void Functions and Value Returning Functions
+    <br><br>Random and Math package (module)
+    <br> storing functions in modules
+    <h3>Functions</h3>
+    functions are a group of statements within a program that perform tasks -- the 'Divide and Conquer' approach because each function can be executed in order to perform overall tasks
+    <br><br>functions help create more readable code that is easier to debug
+    <br><br>Functions help to make more simple code, they allow for code to be reused (since you can call on a function)
+    <br>functions cannot be named the same as keywords, cannot contain spaces, first character must be a letter or underscore, all other characters must be letter, number of underscore, upper and lower case are distinct
+    <br>function names should be descriptive of the task they perform, often include verbs.
+    <h4>Void Function</h4> executes the statements contained and then terminates
+
+    <br>print is an example of a 'void function' - it prints it's output and terminates
+
+    <h4>Value-Returning Function</h4> executes the statement and returns value - 'input', 'int', 'float' will all be value-returning
+    <h3>def function_name():</h3>
+    to create a function you 'define' it with 'def' - functions have parens () and end with ':'
+    <br> when you execute a function you 'call' it - the program will jump back to that function and then returns to the point in the program it was before (the 'function return')
+    <br><br>INDENTATION - each block in a function must be indented - blank lines are ignored
+    <br><br> in flowcharts the function call is shown as a rectangle with vertical bars at each side
+    <br> there is typically a separate flow chart for each function in a program - the 'END' terminal symbol will read 'Return'
+    <br><br> the 'Top-down design' technique is used to break algorithms into functions
+    <h3>Local Variables</h3> local variables are defined and called inside a function -- cannot be called from outside the function
+    <br> local variables cannot be accessed by statements inside the function preceding it's creation
+    <br>local variables can share the same name in different functions, because they will not see each other if they are in separate functions
+    <h3>Passing Arguments to Functions</h3>
+    arguments are data sent into a function. when calling the function the argument is placed in parentheses following the function name
+    <pre>
+def main():
+    value = 5
+    show_double(value)
+
+    def show_double(number):
+        result = number * 2
+        print(result)
+    </pre>
+    <h4>Parameter</h4> is a variable assigned value of argument when the function is called - parameters are listed at the top in parentheses, where the function is defined.
+    <br><br>python allows multiple arguments to be passed into a function a 'parameter list' is comma separated
+    <h4>examples in IDLE </h4>
+    ex: king.py, change.py, turtle03.py -- all of these are examples of void functions
+    <h2>Chapter 05 Video 02 - Value Returning Functions</h2>
+    <a href="https://www.youtube.com/watch?v=nCa9Tm1deEc&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1&index=2">link to part 02</a>
+    <br><br>ex: polite.py asks for a user name and title and creates a polite greeting with the inputted values
+    <br> we create a program that calls upon parameters in a value-return function
+    <h2>Chapter 05 part 03 - Random Module</h2>
+    <a href="https://www.youtube.com/watch?v=BqOeL2CI5qc&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1&index=3">link to video 03</a>
+    <br><br>dealing with the 'random' module in python
+    <br> ex: random01.py
+
+    <h2>Chapter 05 Functions project intro</h2>
+    <a href="https://www.youtube.com/watch?v=BAJuQGAawdU&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1&index=4">link to project intro 03b</a>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
