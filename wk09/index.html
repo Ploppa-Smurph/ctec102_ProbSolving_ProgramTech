@@ -54,17 +54,83 @@
     <br><a href="https://www.youtube.com/watch?v=QZUxah7mhDw&list=PLLqJ8uvo5LV_QmFVvijgzLTdxMpvN-RJ8&index=5">link to error handling ex 2</a>
     <br>ex<i>open_error.py</i>
 
+    <h2>Using Loops to Process Files: Pearson Video</h2>
+    <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/Using_Loops_to_Process_Files">video from text book publisher Pearson to accompany chap 06 in the book</a>
+    <br><br>ex: <i>write_rand.py</i>
+    <br> this project iterates a loop 100 times and writes 100 random number between 1 and 100 and then create a file with the results named 'random.txt'
+    <br>ex: <i>read_numbers_1.py</i>
+    <h2>File Display: Pearson Video</h2>
+    <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/File_Display">link to File Display video</a>
+    <br><br> Assume a file containing integers in named numbers.txt and exists on the computer's disk. write a program that displays all of the numbers in the file.
+    <br><br> Psuedocode:
+    <pre>
+Open file
+For each line in the file:
+    read and display the line
+Close the file
+</pre>
+    <br> ex: <i>file_display.py</i>
+    <h2>Bill Barry's Python File I/O and Exceptions Video</h2>
+    <a href="https://www.youtube.com/watch?v=XkO0EAteOig&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=20">video 01</a>
+    <br> Basics of File Input and Output; Using Loops to process files; Handling ExceptionsS
+    <br><br>we will work with 'persistent' data that exists beyond the program running in RAM
+    <br>text or binary files
+    <br> 2 basic ways to access files: Sequential and Random access
+    <br><br> create a variable to hold the <b>'File Object'</b> - use this every time you do a file operation
+    <ul> mode specifier
+        <li>'r' - read</li>
+        <li>'w' - write</li>
+        <li>'a' - append</li>
+    </ul>
+    ex: using path: <b>hobbyFile = open(r'c:\Files\myhobbies.txt', 'r')</b> -- must use "r" before the full path telling Python this is a 'raw' string
+    <br><br><b>write</b> to a file:
+    <br><br> ex: <b>patientFile.write('John Doe\n')</b> # one string per line
+    <br> <b>patientFile.write(str(43) + '\n')</b> # age -> string
+    <br><br>-or-
+    <br><br> patientFile.write(patientName + '\n')
+    <br> patientFile.write(str(patientAge) + '\n')
+    <br><br><b>read</b> from a file:
+    <br><br>hobbyName = hobbyFile.readline() # grab hobby from the file
+    <br>hobbyName = hobbyName.rstrip('\n') # strips off \n
+    <br>hobbyYears = hobbyFile.readline() # grab years from file
+    <br>hobbyYears = int(hobbyYears.rstrip('\n')) # strip off \n & make integer
+    <h3>Using Loops to Process Files ex:</h3>
+    <code><pre>
+    hobbyFile = open(r'c:\Files\myhobbies.txt', 'r')
+    hobbyName = hobbyFile.readline()     # priming read
+    while hobbyName != '':             # empty string means End of File (EOF)
+        hobbyName = hobbyName.rstrip('\n')
+        hobbyYears = hobbyFile.readline()
+        hobbyYears = int(hobbyYears.rstrip('\n'))
+        print(hobbyName, hobbyYears)
+        hobbyName = hobbyFile.readline()   #last line of the loop is another read - when the file is done the loop will get an empty string and will move to close
+    hobbyFile.close()
+</pre>
+    </code>
 
+    <h4>using 'for loop' to read contents</h4>
+    <pre>
+        hobbyFile = open(r'c:\Files\myhobbies.txt', 'r')
+        for hobbyLine in hobbyFile:
+            print(hobbyLine)
+        hobbyFile.close()
+        </pre> the above code handles all lines generically; to use them as different fields you need additional code
+    <br><br> recommended reading: section 6.3 processing records to add, delete, modify records
+    <h2>Exceptions with Bill Barry</h2>
+    <a href="https://www.youtube.com/watch?v=eQTHIobBba4&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=21">link to video 02</a>
+    <br>Handling Exceptions - if you get an error from input; if you can't find a file that you are searching for; dividing a number by 0
 
-
-
-
-
-
-
-
-
-
+    <pre>
+    try:
+        # potential risky operation
+    except:
+        # what to do to handle problems that might arise
+    else:
+        # do this only if no exception is caught
+    finally:  
+        # do this regardless of any exceptions 
+</pre>
+    <br>ex: <i>human_dog_year.py</i>
 
 
 
