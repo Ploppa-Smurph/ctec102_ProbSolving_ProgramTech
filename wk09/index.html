@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Files and Exception wk 09</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Files and Exception wk 09</h1><a href="https://www.youtube.com/watch?v=gxLGp4QptMg&list=PLLqJ8uvo5LV_QmFVvijgzLTdxMpvN-RJ8">link to video 1</a>
+    <br><br>File Input and Output, Using Loops to Process Files, Processing Records, Exceptions
+    <h3>Input and Output</h3>
+    read from a file, write from a file. Data is stored as variables and saved to a file for use later.
+    <br>Files are saved from RAM and stored onto physical storage.
+    <br>3 steps when a program uses a file. it Open the file, Process the file, and Closes the file
+    <h3>Types of Files and File Access Methods</h3>
+    <b>Text Files</b> - contains data has been encoded as text. uses .txt file
+    <br><b>Binary Files</b> - contains data that has not been converted to text.
+    <br><br>Two ways to access data stored in a file
+    <br><b>Sequential Access</b> - files are read sequentially from beginning to end, NO skipping ahead
+    <br><b>Direct Access</b> - can jump directly to any piece of data in the file
+
+    <h3>File Names and File Objects</h3>
+    we will be using .txt (text) files.
+    <br>File Object -- object associated with a specific file the object is referenced by a variable
+    <h3>Open Function - open()</h3>
+    creates a file object and associates it with a file on the disk
+    <br>ex: <b>file_object = open(filename, mode)</b>
+    <br><br><b>Mode</b> - the mode is a string which specifies how to open the file, 'r' = read; 'w' = write; and 'a' = append
+    <br> you have to specify a path, otherwise the program will automatically create a file with that name in the current directory
+    <br><br> <b>Methods</b> are functions which belong to objects
+    <br><br><b>write</b> method which is used to write data to the file ex: <b>file_variable.write(string)</b>
+    <br><br><b>close</b> method is used to close the file object after manipulating the file. ex: <b>file_variable.close()</b>
+    <h3>Reading Data from a File</h3>
+    <b>read</b> method - file must be opened first, this method will read the entire file in RAM and return the contents as a String
+    <br><br><b>readline</b> method - a method to read a line from the file. Lines are returned as a string, including '\n'
+    <br><b>Read Position</b> - marks the location of the next item to be read from a file
+    <br><br> example: <i>read_print.py</i>
+    <h3>Append a line to a file</h3>
+    <a href="https://www.youtube.com/watch?v=HcGUseemhbA&list=PLLqJ8uvo5LV_QmFVvijgzLTdxMpvN-RJ8&index=2">link to video 2</a>
+    <h3>Append File</h3>
+    ex: <i>append_file.py</i>
+
+    <br><br><b>Delete a file</b> -- import os library in python and use the os.remove('blah.txt') method
+
+    <h3>Writing to a File</h3>
+    <a href="https://www.youtube.com/watch?v=FNHgnIFqYn0&list=PLLqJ8uvo5LV_QmFVvijgzLTdxMpvN-RJ8&index=3">link to video 3</a>
+    <br><br> ex: <i>write_file.py</i> and <i>read_sum.py</i>
+    <h3>Try and Except - Handling Exceptions</h3>
+    <a href="https://www.youtube.com/watch?v=nuiHwFZq_jk&list=PLLqJ8uvo5LV_QmFVvijgzLTdxMpvN-RJ8&index=4">link to video 4</a>
+    <br><br>ex: <i>try.py</i>
+    <br><a href="https://www.youtube.com/watch?v=QZUxah7mhDw&list=PLLqJ8uvo5LV_QmFVvijgzLTdxMpvN-RJ8&index=5">link to error handling ex 2</a>
+    <br>ex<i>open_error.py</i>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

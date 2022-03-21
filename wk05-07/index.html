@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Chapter 5 Functions</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Chapter 5 Functions</h1>
+    <a href="https://www.youtube.com/watch?v=nRSP5rzkMlk&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1">link to video part 1</a> Void Functions and Value Returning Functions
+    <br><br>Random and Math package (module)
+    <br> storing functions in modules
+    <h3>Functions</h3>
+    functions are a group of statements within a program that perform tasks -- the 'Divide and Conquer' approach because each function can be executed in order to perform overall tasks
+    <br><br>functions help create more readable code that is easier to debug
+    <br><br>Functions help to make more simple code, they allow for code to be reused (since you can call on a function)
+    <br>functions cannot be named the same as keywords, cannot contain spaces, first character must be a letter or underscore, all other characters must be letter, number of underscore, upper and lower case are distinct
+    <br>function names should be descriptive of the task they perform, often include verbs.
+    <h4>Void Function</h4> executes the statements contained and then terminates
+
+    <br>print is an example of a 'void function' - it prints it's output and terminates
+
+    <h4>Value-Returning Function</h4> executes the statement and returns value - 'input', 'int', 'float' will all be value-returning
+    <h3>def function_name():</h3>
+    to create a function you 'define' it with 'def' - functions have parens () and end with ':'
+    <br> when you execute a function you 'call' it - the program will jump back to that function and then returns to the point in the program it was before (the 'function return')
+    <br><br>INDENTATION - each block in a function must be indented - blank lines are ignored
+    <br><br> in flowcharts the function call is shown as a rectangle with vertical bars at each side
+    <br> there is typically a separate flow chart for each function in a program - the 'END' terminal symbol will read 'Return'
+    <br><br> the 'Top-down design' technique is used to break algorithms into functions
+    <h3>Local Variables</h3> local variables are defined and called inside a function -- cannot be called from outside the function
+    <br> local variables cannot be accessed by statements inside the function preceding it's creation
+    <br>local variables can share the same name in different functions, because they will not see each other if they are in separate functions
+    <h3>Passing Arguments to Functions</h3>
+    arguments are data sent into a function. when calling the function the argument is placed in parentheses following the function name
+    <pre>
+def main():
+    value = 5
+    show_double(value)
+
+    def show_double(number):
+        result = number * 2
+        print(result)
+    </pre>
+    <h4>Parameter</h4> is a variable assigned value of argument when the function is called - parameters are listed at the top in parentheses, where the function is defined.
+    <br><br>python allows multiple arguments to be passed into a function a 'parameter list' is comma separated
+    <h4>examples in IDLE </h4>
+    ex: king.py, change.py, turtle03.py -- all of these are examples of void functions
+    <h2>Chapter 05 Video 02 - Value Returning Functions</h2>
+    <a href="https://www.youtube.com/watch?v=nCa9Tm1deEc&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1&index=2">link to part 02</a>
+    <br><br>ex: polite.py asks for a user name and title and creates a polite greeting with the inputted values
+    <br> we create a program that calls upon parameters in a value-return function
+    <h2>Chapter 05 part 03 - Random Module</h2>
+    <a href="https://www.youtube.com/watch?v=BqOeL2CI5qc&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1&index=3">link to video 03</a>
+    <br><br>dealing with the 'random' module in python
+    <br> ex: random01.py
+
+    <h2>Chapter 05 Functions project intro</h2>
+    <a href="https://www.youtube.com/watch?v=BAJuQGAawdU&list=PLLqJ8uvo5LV8odkS_t0dp3ZCPYxw6R5r1&index=4">link to project intro 03b</a>
+    <br><br>ex: main_starter.py and area_module_starter.py
+
+    <h2>05 part 04</h2>
+    <a href="https://www.youtube.com/watch?v=FKeBoJW7D6g&t=1s">link to video</a>
+    <h3>Arguments and Parameters</h3>
+    <br>arguments vs parameters - ex: function_arg_param.py
+    <h3>Modules</h3>
+    ex: import random (imports the random module). you can create custom modules also!!
+    <br>ex: function_module.py
+    <h3>Local and Global Variables</h3>
+    local and global variables; ex: function_variables.py
+
+    <br><br> <a href="">link to video 04b</a>
+    <br>Local and Global ex02: function_variables02.py
+    <h3>Math Module</h3>
+    ex: function_math.py
+
+    <h1>Bill Barry's Python Intro to Functions</h1>
+    <a href="https://www.youtube.com/watch?v=gk5qqp7DSlU&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=15">Gentle intro to Functions part01 video</a>
+    <br> Lazy Professor example - func1 gets snacks, func2 gets markers and erasers, func3 writes information to billboard.
+    <br> func1 needs input and gets output, func2 does not need input and gives output, func3 needs input but is a void because she prints and is done
+    <br><br> Call Hierarchy - professor (main program) has functions for: get snacks, get markers, write on board. the get snacks function has 3 subs: get fritos, get pepsi, get mints
+    <br> Call Stack - - each part of the program has an order that calls the function
+    <br><br>Bill keeps mentioning the 'contract' of functions, and how functions fulfill 'contracts' <pre>
+    define GetSnacks(in: order and money; out: snacks, change):
+        go to third floor for 
+        go to second floor for 
+        go to 1st floor for
+        return snacks change
+    def GetMarker(in: nothing; out: markers, eraser):
+        go to office and retrieve marker and eraser
+        return
+    def WriteOnBoard(in:date, lesson; out: nothing):
+        print(date, lesson)
+</pre> <br> in the above pseudocode the 'in' items are the parameters and the 'outs' are 'return' values
+    <br><br> more pseudocode:
+    <pre>
+    def main():
+        snackMoney = 7.00
+        lessonTitle = 'Intro to Chem'
+        snacks, change = \ getSnacks(snackMoney)
+        markers, eraser = getMarkers()
+        writeOnBoard(lessonTitle)
+    main()
+
+ functions would be:
+
+    def getSnacks(money):
+        #go to third floor...
+        return snacks, change
+
+    def getMarkers():
+        #go to the office
+        return markers, eraser
+
+    def writeOnBoard(lessonTitle):
+        #walk to white board and print information [NO Return - VOID]
+    </pre>
+    <h3>BB's Functions part 02</h3>
+    <a href="https://www.youtube.com/watch?v=uXRC51TTsFw&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=16">link to Functions part 02</a>
+    <br><br>functions are blocks of code that help to simplify long programs. functions facilitate teamwork and help with 'top-down' design
+    <h4>Designing Programs to Use Functions</h4> using a 'Top-Down' or Hierarchy Chart
+    <br><br> payroll ex: start at top with 'Payroll'
+    <br>then: 'get emp data'; 'calc payroll'; 'print checks', 'print report'
+    <br>under 'get emp data' we need to 'get emp hours' & 'get emp wage'; and under 'calc payroll' we would have: 'Gross pay', 'Withholding'; 'Social Security'; 'Net Pay'
+    <br><br> the above example is 'Functional Decomposition', aka Top-Down Design which results in a Hierarchy Chart (looks like a flowchart when drawn out) of functions for our program
+    <h4>Defining Functions</h4>
+    you define a function by typing 'def' at the beginning of the line, name the function, it must have parenthesis and end with a colon: -- the colon let's python know the following code is blocked with this statement
+    <br>def sayHello():
+    <br>.....print('hello') ## tabbed over
+    <br>sayHello() -- call the function
+
+    <br><br> ex: sayHello.py
+    <h4>Parameters and Return Values</h4>
+    a function's input is a 'parameter' == ex: dogYears.py
+    <h3>Built-in Modules</h3>
+    import random; import math ex: mathex01.py
+    <br><br> to make a custom module you put the functions in a separate .py file and 'import' your .py filename
+    <h2>BB Chap 05 Project: Bakery Order</h2><a href="https://www.youtube.com/watch?v=yj5wzfSO_rs&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=17">link to bakery project part 01</a> ex: /bakery/bakery.py
+    <pre>
+# customer enters # of pies they wish to order and the order is formatted for display
+# calculate order based on quantity totals for pie or cake; price per pie ($17.99) and price per cake ($24.99)
+# calculates tax of 9.5% - display order summary with totals and tax
+
+# call Hierarchy== Main -> will call: Input order Data; Price order, Display summary.
+# Price order will call: -> Price pie; Price Cakes; Calculate Tax; Calculate Total
+
+# - annotate the Hierarchy and find out what DATA each Function needs to complete it's job
+# our input order data will not need any data from Main, but it is important that it 'Returns' it's inputted data back to Main so the program can work properly
+# Price order needs the cake and pie count from Main, then Price Order will pass that information on for pricing
+# price pies receives # of pies from Price Order and 'returns' the total pie price 
+# price cakes receives the # of cakes from Price Order and returns the total cake price
+# Calculate Tax then receives the current price order (including the current pie and cake count) and calculates tax based on that information - the tax is returned to price order
+# Calculate Total receives the price total of pies, price total of cakes, and tax total and calculates the total order and returns the total to Price Order
+# Price Order Returns information to Main
+# Main calls Display Summary and delivers the pie quantity and price, the cake quantity and price, the tax, and the order total to display as a void function - it outputs and returns nothing.
+</pre>
+    <h3>bakery project part 02</h3>
+    <a href="https://www.youtube.com/watch?v=CmXoe1oU-Fk&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=18">link to part02</a>
+    <br>-- fleshed out some of the programs parameters and returns in the first part (using the Hiearchy Chart)
+
+    <br><br> **** Define Constants at the top with caps and underscore, ex: <b>CONSTANT_NAME</b> that way they will stick out in the program where they are called upon
+
+    <h3> Bakery Program Display Formatting </h3>
+    <a href="https://www.youtube.com/watch?v=YQaj19xfNxg&list=PLrCtLWOL70NSmuUs4D0jzOJr3yQ1jSRBw&index=19">link to 3rd video</a>
+    <br> in this episode we format the output of the bakery program
+
+    <h4>That was a great example - thanks Bill</h4>
+
+
+
+
+
+</body>
+
+</html>

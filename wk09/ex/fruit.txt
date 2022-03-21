@@ -1,0 +1,6 @@
+spinach
+kale
+tomatoes
+apples
+leaves
+grass
