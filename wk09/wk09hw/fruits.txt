@@ -1,0 +1,22 @@
+apple
+banana
+date
+kiwi
+kumquat
+lime
+loquat
+lychee
+mango
+orange
+papaya
+peach
+pear
+persimmon
+pineapple
+pitaya (dragonfruit)
+plantain
+plum
+soursop
+strawberry
+tamarind
+watermellon
