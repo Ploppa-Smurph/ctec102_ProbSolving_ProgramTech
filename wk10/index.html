@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Lists and Tuples</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Lists and Tuples</h1>
+
+    <br>additional reference:
+    <h3>Socratica List Intro Video</h3>
+    <br><a href="https://www.youtube.com/watch?v=ohCDWZgNIU0">link to Socratica List Intro </a>
+    <br>2 ways to make lists. with a constructor, or with []. you can prepopulate a list
+    <br>ex01 = list() -- list creator
+    <br>ex02 = []
+    <br>primes = [2,3,5,7,11,13]
+    <br>primes.append(17) -> will add 17 to the end of the list
+    <br>in 'lists' the order of data is important, in 'sets' the data order is not important.
+    <br>In Lists Order is Everything
+    <br> you can access a value in a list by it's index. ex: primes[2] will return '5'
+    <br> if you enter a -1 as an index python will start counting from the end of the list (17) in our example
+    <br> <b>Slicing</b> type the list name, starting index and closing index. ex:
+    <br><i>primes[2:5]</i> returns [5,7,11] the result is a sublist of numbers beginning at index 2 up to 5 (does not include that index)
+    <br> lists can contain other lists
+    <br> you can combine lists together by simply concatenating them using the '+' ex:
+    <br> primes + letters = [2,3,5,7,11,13, 'a', 'b', 'c']
+
+    <h3>Navin Reddy Vide</h3>
+    <br><a href="https://www.youtube.com/watch?v=Eaz5e6M8tL4">link to Telusko List Intro</a>
+    <br> print to an end element. ex: nums[2:] -- will print the item at index 2 (3rd item) to the end of the list
+    <br> with list we can combine them into one ex:
+    <br>mil = [nums, names] -> if there were a nums list and a names list they would now be joined in the nums + names order and stored as variable mil
+    <br> in Python lists are 'mutable' meaning that we can change their value. '.append()'
+    <br> Append and Insert are similar, but different methods. Remove and Pop are also similar, but different
+    <br>.push and .pop are for working with the stack
+    <br> you can add multiple items to a list with .extend([2,22,34,76]). must have parens and square brackets to extend
+    <br> you can interact with lists in python, ex: min(nums) - will return the smallest int in the list, max(nums) will return the largest number
+    <br> sum(nums) will give you the sum of the numbers in the list
+
+
+    <br><a href="https://www.youtube.com/watch?v=NI26dqhs2Rk">link to Tuples Intro </a>
+    <br><br> Socratica Python Tuples Intro
+    <br> lists use []; while Tuples use ()
+    <br> ex: <i>tuples.py</i>
+    <br> lists have many more methods available than tuples.
+
+    <br> to view the methods available for an object use 'dir' on the object ex: <i>print(dir(prime_num))</i> in the list / tuples example
+    <br> lists occupy more memory in a program than tuples, but have more functionality
+    <br><br> Lists can be changed, Tuples are immutable
+
+
+
+
+
+    <br><a href="https://www.youtube.com/watch?v=AhSvKGTh28Q">link to List Comprehension</a>
+
+    <h3>Lists</h3>
+    <a href="https://www.youtube.com/watch?v=aPZtTQFqPTU&list=PLLqJ8uvo5LV82lBeLLKNNjJAfLzpAinjH">Vlad's link to video 01</a>
+    <br>both lists and tuples are kinds of sequences in programming; sequences are objects that contain multiple items of data
+    <br>Lists are mutable (can be changed, add, change, or delete elements); Tuples are immutable (unchangeable)
+    <br>going to examples:
+    <br>lists can be concatenated, lists can be multiplied by themselves to double, or triple themselves
+    <br>reference end of list with -1, -2, -3
+    <br> list splicing [4:6]
+    <br> change value at index, ex: L[2] = 18 (will change the value at index 2)
+    <br> can Concatenate lists, ex: L1 + L2
+    <br> check to see if an item is on the list ex: 50 in L -> returns False because 50 is not on the list
+    <br> ex: 49 in L -> will return True because the value 49 is contained in the list
+    <br><b>L.append() </b> -- add an item to the end of the list
+    <br><b>L.index(5)</b> -- returns the value in that index spot
+    <br><b>L.remove()</b>
+    <br><b>L.sort()</b> to sort all values need to be the same
+    <br><b>del L[-1]</b> will delete the last value of the list
+    <br><br> to Copy lists you must, ex:
+    <br><b> list = [] + L</b> -- setting variable list equal to an empty list + the existing list "L"
+    <br> there is also a .copy() method in list
+
+    <h2>Lists Video part 02</h2>
+    <a href="https://www.youtube.com/watch?v=-vcSjkG9jLI&list=PLLqJ8uvo5LV82lBeLLKNNjJAfLzpAinjH&index=2">link to part 02</a>
+    <br><br> <b>Two-Dimensional List </b> - a list that contains lists as it's elements; aka <b>Nested List</b>
+    <br>common to think of 2D lists as having rows and columns; useful for working with multiple data sets
+    <br> to process the data, you must use 2 indexes
+    <br><br> <b>you can Abate a global variable with .append()</b>
+
+    <h2>Tuples and Matplotlib video 03</h2>
+    <a href="https://www.youtube.com/watch?v=B0p8vx7c04I&list=PLLqJ8uvo5LV82lBeLLKNNjJAfLzpAinjH&index=3">link to video 03</a>
+    <br><br> tuples have parens (tuple, tuple) instead of square brackets [list, list]
+    <br> tuples and lists both have: subscript indexing; methods such as index; built in functions: len, min, max; slicing expressions; the in, +, and * operators
+    <br> tuples are immutable, therefore cannot be modified: cannot: append; remove, insert, reverse, or sort
+    <br>faster to create than lists, take up less space in memory (smaller size)
+    <br><br> you can convert a tuple to a list with the <b>list()</b> function
+    <br><b>tuple()</b> function converts a list to a tuple
+    <h3>matplotlib</h3>
+
+
+
+
+</body>
+
+</html>

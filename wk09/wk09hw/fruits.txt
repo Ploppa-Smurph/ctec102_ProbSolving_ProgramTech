@@ -19,4 +19,4 @@ plum
 soursop
 strawberry
 tamarind
-watermellon
+watermelon
