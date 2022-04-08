@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Dictionaries and Sets wk11</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Dictionaries and Sets</h1>
+    <a href="https://www.youtube.com/watch?v=kAYOnoGeiWQ&list=PLLqJ8uvo5LV_dpRT-hhkGRLw5Wpk0mYM8">link to video 01</a>
+    <b>Dictionaries</b> are objects that store collections of data
+    <br> mapping key - value pairs. the key is immutable in a dictionary
+    <br><br> Format to create a dictionary: <b><i>dictionary = {key1:val1, key2:val2}</i></b>
+    <br><br> Elements in the dictionary are unsorted. the general format to retrieve a value from the dictionary is:
+    <br> <b><i>dictionary[key]</i></b> - if 'key' is in the dictionary it is returned, otherwise we return a <i>KeyError</i> exception
+    <br>we test if a key is in a dictionary with the <i>in</i> and <i>not in</i> operators.
+    <h3>Adding Elements to a dictionary</h3>
+    ex: <b><i>dictionary[key] = value</i></b> - if key exists in the dictionary the value associated with it will be changed
+    <h2>Dictionary video by Socratica</h2>
+    <a href="https://www.youtube.com/watch?v=XCcpzWs-CI4&list=PLLqJ8uvo5LV_dpRT-hhkGRLw5Wpk0mYM8&index=2">link to Dictionary video</a>
+    <br><br> called an <b>Associative Array</b> or <b>Map</b> in other languages, Python refers to Key:Value pairs as a Dictionary
+
+    <h2>CTEC-102 Dictionaries part 02</h2>
+    <a href="https://www.youtube.com/watch?v=lXc-bTGYbm8&list=PLLqJ8uvo5LV_dpRT-hhkGRLw5Wpk0mYM8&index=4">link to video 02</a>
+    <br>ex: <i>phoneBook.py </i>
+
+    <h2>Sets and Pickle</h2>
+    <a href="https://www.youtube.com/watch?v=ZC-LUopjXSQ&list=PLLqJ8uvo5LV_dpRT-hhkGRLw5Wpk0mYM8&index=5">link to video on Sets, Serializing Objects, and Saving with Pickle</a> Set - objet that stores a collection of data in same way as mathematical set
+    <br> All items must be unique, Set is Unordered, Elements can be of different data types
+    <br><br><b>set()</b> the set() function is how we create and call an empty set
+    <br>a non-empty set is called by: <b>set(arguement)</b> the <i>argument</i> can be a list, string, or tuple
+    <br>if <i>arguement</i> is a string then each character becomes an element of the set
+    <br> if the <i>argument</i> contains duplicate elements, then only 1 of the elements will appear in the set
+    <br><br> there are functions that act on the set: len(), add(), and update()
+    <ul>
+        <li><b>len()</b> - returns the number of elements in the set</li>
+        <li><b>add()</b> - adds an element to a set</li>
+        <li><b>update()</b> - adds a group of elements to a set</li>
+        <li><b>remove()</b> - rasises KeyError exception if item is not in the list</li>
+        <li><b>discard()</b> - does not raise an exception</li>
+        <li><b>clear()</b> - clears all the elements of the set</li>
+    </ul>
+    there is a difference between 'remove()' and 'discard()'; <i>remove()</i> will pass a KeyError exception if the item is not in the set
+    <br> <i>ex: sets01.py</i>
+    <br><br><i>ex: set02.py</i>
+    <pre>
+        # working with sets some more
+
+        A={1,2,3}
+        B={2,3,4}
+        print('what is the union() of A and B?')
+        print('A.union(B)')
+        print(A.union(B))
+        print('then why does A still equal')
+        print('A =', A)
+        print('did you know that the | pipe character will do the same thing?')
+        print('A|B is the same as A.union(B)')
+        print('A|B =', A|B)
+        print('you can use the difference() or - to find out which items are not contained in both sets')
+        print('A-B =', A-B)
+        print('B-A =', B-A)
+        print('Symmetric Difference ^ will tell you which objects are in either set, but not in both')
+        print('A^B =', A^B)
+        print('Intersection = A.intersection(B)', A.intersection(B))
+        print('A&B is a shortcut for intersection, A&B =', A&B)
+        print('we can also determine SubSets <every element of A will be an element of B>')
+        print('A<=B', A<=B)
+        print('the above is False because every element of A is not contained in B')
+        print('{3}<=A ', {3}<=A, ' this is True because 3 is contained in A')
+
+</pre>
+    <h3>Serializing Objects</h3>
+    <b>Serializing Objects</b> converts the object into a stream of bytes that can easily be stored in a file
+    <br>in Python that is called <b>Pickling</b> as in 'preserving'
+    <br>import <i>pickle</i> and then use the <b>pickle.dump()</b>
+    <br><br><b>pickle.dump(object, file)</b>
+    <ul>
+        <li>import <i>pickle</i></li>
+        <li>Open a file for binary writing</li>
+        <li>Call the <i>pickle.dump(object, file)</i></li>
+        <li>Close the file</li>
+        <li>** You can pickle multiple objects to one file before closing the file</li>
+    </ul>
+    <b>Unpickling:</b> is the process of loading, or retrieving an object
+    <br>to unpickle:
+    <ul>
+        <li>import <i>pickle</i> module</li>
+        <li>Open a file for binary writing</li>
+        <li>Call <i>pickle.load(file)</i> function</li>
+        <li>close the file</li>
+        <li>** You can unpickle multiple objects from the file</li>
+    </ul>
+    <i>ex: phoneBook.py</i>
+
+    <h2>Introduction to Dictionaries: from Pearson Publishing</h2>
+    <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/Introduction_to_Dictionaries">link to the video</a>
+
+    <h2>Introduction to Sets: from Pearson Publishing</h2>
+    <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/Introduction_to_Sets">link to the video</a>
+
+    <h2>The Capital Quiz Problem</h2>
+    <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/The_Capital_Quiz_Problem">link to video</a>
+
+
+
+</body>
+
+</html>
