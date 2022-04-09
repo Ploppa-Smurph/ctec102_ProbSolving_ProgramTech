@@ -19,9 +19,38 @@
     <br>we test if a key is in a dictionary with the <i>in</i> and <i>not in</i> operators.
     <h3>Adding Elements to a dictionary</h3>
     ex: <b><i>dictionary[key] = value</i></b> - if key exists in the dictionary the value associated with it will be changed
+
     <h2>Dictionary video by Socratica</h2>
     <a href="https://www.youtube.com/watch?v=XCcpzWs-CI4&list=PLLqJ8uvo5LV_dpRT-hhkGRLw5Wpk0mYM8&index=2">link to Dictionary video</a>
     <br><br> called an <b>Associative Array</b> or <b>Map</b> in other languages, Python refers to Key:Value pairs as a Dictionary
+    <br> <i>friendface.py</i>
+    <br> if you use <b><i>type()</i></b> ex: <b>type(post)</b> from the example - it will show that post is a 'dict' class
+    <br><br> <b>dict</b> constructor -- format: <b>post2 = dict(message="finger food", language="en")</b>
+    <br> if you try to access data with a nonexistent key then you get a <b><i>KeyError</i></b>
+    <br> use the <b><i>in</i></b> operator to error handle with and if: else: ex:
+    <br><b><i>>if 'location' in post2:</i></b> -- see ex: friendface.py
+    <pre>
+        # checking for KeyError and creating exception
+        try:
+            print(post2['location'])
+        except KeyError: 
+            print('No location found')   
+        
+        # see what methods the post2 dictionary has
+        dir(post2)   
+        
+        # the .get method Returns a value for a key if it is in the dictionary, else it return <i>NONE</i> a default value
+        # we set the post2.get() method to a variable named 'loc'
+        loc = post2.get('location', None)
+        print(loc)
+        
+        # .keys method - loop through the keys in a dictionary
+        for key in post.keys():
+            value = post[key]
+            print(key, '=', value)
+</pre>
+    <b><i>.pop(), .popitem(), and .clear() </i></b> methods are ways to remove information from a dictionary
+
 
     <h2>CTEC-102 Dictionaries part 02</h2>
     <a href="https://www.youtube.com/watch?v=lXc-bTGYbm8&list=PLLqJ8uvo5LV_dpRT-hhkGRLw5Wpk0mYM8&index=4">link to video 02</a>
@@ -96,10 +125,107 @@
     <i>ex: phoneBook.py</i>
 
     <h2>Introduction to Dictionaries: from Pearson Publishing</h2>
-    <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/Introduction_to_Dictionaries">link to the video</a>
+    <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/Introduction_to_Dictionaries">link to the video</a> intro to Dictionaries -- an object that stores items of data
+    <br> Dictionaries are different from lists because all items are stored as key:value pairs;
+    <br> he uses a phonebook dictionary as the example, also. similar to what Prof Chaynikov did in his video
+    <br>Lists are a sequence of items that is indexed; dictionaries are unordered
+    <br>to get a value from the dictionary: <b><i>phonebook['vlad']</i></b> will return the value associated with the Key 'vlad'
+    <br> if a Key does not exist then we get a KeyError exception.
+    <br><b>number = phonebook['chris']</b> -- assign that to a variable then you just call number any time you need chris' number
+    <br><br>using the <b><i>in</i></b> operator for exception handling
+    <pre>
+        if 'chris' in phonebook:
+            print(phonebook['chris'])
+        else:
+            print('That name is not in the phonebook')
+    </pre> there is also a <b><i>not in</i></b> operator which is used the same way
+    <br><br> Adding new items:
+    <br><b>phonebook['jimmy'] = '555-1111'</b> will create a new item in the phonebook{} dictionary.
+    <br><br> Delete item from Dictionary
+    <br><b>del phonebook['jimmy']</b> will delete the key:value pair from the dictionary (using the key)
 
     <h2>Introduction to Sets: from Pearson Publishing</h2>
     <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/Introduction_to_Sets">link to the video</a>
+    <br>a set is also an object that store items of data, it is different than tuples,dictionaries, and lists, because <b>All items/elements in a set must be different</b>
+    <br>Sets, like dictionaries, are unordered. - the elements can be of different data types
+    <br> ex: <i>setbb01.py</i>
+    <pre>
+    # add a list to a set
+myset = set('abcdefghijklmnopqrstuvwxyz')
+print(myset)
+print('it breaks the letters down into individual characters and stores them unordered. When you print them out you get alphabet soup!')
+
+# in order to pass a list of strings you have you put the list in brackets
+myset = set(['john', 'paul', 'george', 'ringo'])
+print(myset)
+
+# using the .add() method
+myset.add('Eric') # add Eric to the set without using brackets
+print(myset)
+
+# .remove() method
+myset.remove('Eric') # remove Eric from the set -- Will throw an Exception if the item does not exist 
+print(myset)
+
+# .discard() method
+myset.discard('Phillip') # discards Phillip from the set if it is there -- Will NOT throw an Exception if the item was not there
+
+'''
+There are additional methods that you can use on sets --  
+        .update() - which allows you to update items in a set, merge sets, and merge lists and sets
+        .cleare() - clears ALL the items in a set               
+        '''
+# for loop to iterate over items in a set
+# using 'in' and 'not in' operators
+
+'''UNION, INTERSECTION, DIFFERENCE, SYMMETRIC DIFFERENCE, SUBSET, and SUPERSET'''
+
+#Union
+print('do you know what the Union of 2 sets is? it is a set that contains ALL of the elements of BOTH sets.')
+set02 = set(['paul', 'lance', 'hank', 'johnny'])
+print('this is myset:', myset)
+print('this is set02:', set02)
+set3 = myset.union(set02)
+print('this is the union of myset and set02:', set3)
+
+# Intersection
+print('have you heard of an intersection? it is a set that contains ')
+intersection = myset.intersection(set02)
+print('this is the intersection of myset and set02: ',intersection)
+intersection02 = set02.intersection(myset)
+print('this is the intersection of set02 and myset: ',intersection02)
+
+#Difference
+print('what is the difference between 2 sets, you can use the "-" operator? a set that contains the elements that are Different from the 1st set to the second set.')
+difference = myset.difference(set02)
+print('this is the difference of myset - set02: ',difference)
+difference02 = set02.difference(myset)
+print('this is the difference of set02 - myset: ',difference02)
+print('the order makes a difference this time')
+
+#SYMMETRIC DIFFERENCE
+print('now i know you are wondering about symmetric difference, you can use the "^" operator, it is a set that contains the elements from both sets that are NOT in both sets already.')
+sym = myset.symmetric_difference(set02)
+print('this the symmetric difference of myset ^ set02: ', sym)
+
+# kept getting Attribute errors with Subset and Superset
+'''#SUBSET and SUPERSET
+print('to find the Subset of 2 sets, you can use the "<=" operator. a subset is ')
+set03 = ('123456')
+set04 = ('1234')
+print('working with 2 different sets now, set03 and set04', set03, set04)
+print('we can see that set04 is a subset of set03: ', set04.<=(set03))
+print('and that set03 is the superset of set04: ', set03.>=(set04))'''
+</pre>
+
+
+
+
+
+
+
+
+
 
     <h2>The Capital Quiz Problem</h2>
     <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/The_Capital_Quiz_Problem">link to video</a>
