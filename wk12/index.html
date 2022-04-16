@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC-102 Ch 10 Classes and Object Oriented Programming</title>
+</head>
+
+<body>
+    <h1>CTEC-102 Ch 10 Classes and Object Oriented Programming</h1>
+    <a href="https://www.youtube.com/watch?v=oWwWxoVTC7M&list=PLLqJ8uvo5LV9nN_SH7_myf1cXdmuDXTN0">Link to video</a>
+    <br><br>we start working with Classes
+    <br>Procedural and Object-Oriented Programming; Classes; Working with Instances; and Techniques for Designing Classes
+    <h3>Procedural Programming</h3>
+    Writing programs made of functions that perform specific tasks
+    <br>procedures typically operate on data items that are separate from the procedure
+    <br>data items are commonly passed from one procedure to the another
+    <br><b>Focus:</b> - to create procedures that operate on the program's data
+    <h3>Object-Oriented Programming</h3>
+    Focused on creating objects -- an <b>Object</b> is an entity that contains data and procedures
+    <br><b>Data</b> is known as 'Data Attributes' and <b>Procedures</b> are known as 'Methods'
+    <br><br><b>Encapsulation</b> is combining data and code into a single object
+    <br>a List is an object - it will contain a sequence of data - but if we create a List named L and <b>dir(L)</b> - we will see the methods available to use on the object 'L' (List)
+    <br><br>ex: <i>insect_class.py</i>
+    <h4>Data Hiding</h4> (Getters and Setters)- object's data attributes are hidden from code outside the object.
+    <br> this keeps Access restricted to the object's methods, which protects from accidental corruption. (Outside code does not need to know internal structure of the object)
+    <br><br><b>Object Reusability</b> - same object can be used in multiple programs.
+    <ul>
+        <li><b>Data Attributes</b> - define the state of an object; ex: clock object will have <i>second, minute, hour</i> data attributes</li>
+        <li><b>Public Methods</b> - allow external code to manipulate the object; ex: <i>set_time, set_alarm_time</i> </li>
+        <li><b>Private Methods</b> - used for objects inner workings; ex: <i>circuit board, battery, wiring</i></li>
+    </ul>
+    <h3>Classes</h3>
+    <ul>
+        <li><b>Class</b> - code that specifies the data attributes and methods of a a particular type of object. ex: <i>blueprint of a house, cookie cutter</i></li>
+        <li><b>Instance</b> - object created from a class; ex: <i>houses built from the blueprint, or cookies made with that cutter.</i> There may be many instances of one class</li>
+    </ul>
+    the Class is an abstraction and the Instance is a specific object that can be acted upon the <b>Class Definitions</b> are a set of statements that define a class' methods and data attributes
+    <br><br>Format: begin with <b><i>class Class_name:</i></b> -- class names often start with an Uppercase letter
+    <br>Method definition like any other python function definition
+    <br><b><i>self</i></b> parameter: required in every method in the class.
+    <br><b><i>self</i></b> references the specific object that the method is working on; some programmers use 'x' instead of 'self'
+    <br><br><b>Initializer Method</b> automatically executed when an instance of the class is created
+    <br><b><i>def __init__(self):</i></b> - Initializes object's data attribures and assigns 'self' parameter to the object that was just created; it is Usually the first method in a class definition
+    <br>all private methods have the double underscore "__"
+    <br><br> To create a new instance of a class call the initializer method - My_instance = Class_Name()
+    <br><br>To call any of the class methods using the created instance, use 'dot notation'
+    <br><b><i>My_instance.method()</i></b>; because the 'self' parameter references the specific instance of the object, the method affect this instance;
+    <br> Reference to <i>'self'</i> is passed automatically
+
+
+</body>
+
+</html>
