@@ -10,25 +10,58 @@
 
 <body>
     <h1>CTEC-102 Classes pt 02</h1>
-    <a href="https://www.youtube.com/watch?v=H_ftuOj3dJY&list=PLLqJ8uvo5LV9nN_SH7_myf1cXdmuDXTN0&index=2">Link to part02</a>
-
-
-
-
-
+    <a href="https://www.youtube.com/watch?v=H_ftuOj3dJY&list=PLLqJ8uvo5LV9nN_SH7_myf1cXdmuDXTN0&index=2">Link to part02</a> went over ex: <i>insect02.py</i>.
+    <br><br> Review: - create a Class -> create objects from the Class -> Objects contain data and methods
+    <br> the objects method's are what operate on outside objects -- getters and setters
+    <br> Classes are Blueprints -- each Object instance can vary wildly even when based on the same class
+    <br><br><b><i>class Class_name:</i></b> is the format for creating a class.
+    <br>the <b>self</b> parameter must be included in every method in a class. 'Self' references the specific object instance that the method is working on.
+    <br><b>def __init__(self):</b> - the Initializer Method is automatically executed when an instance of the class is created.
+    <br> the initializer method is usually the 1st method in the class, initializes the object's data attributes and assigns <b><i>self</i></b> parameter to the object that was created.
+    <br><br> the 'String' Method: <b>__str__</b> displays an object's state.
+    <br> the string method is automatically called when the object is passed as an argument to the print function or the <i>str</i> function.
+    <br><br>Getter is the <b>Accessor</b> method: it returns a value from a classes attribute without changing it
+    <br>Setter is the <b>Mutator</b> method: stores or changes the value of a data attribute
 
     <h2>Classes and Objects pt 03</h2>
     <a href="https://www.youtube.com/watch?v=UOmKXEAIC8s&list=PLLqJ8uvo5LV9nN_SH7_myf1cXdmuDXTN0&index=3">Link to part03</a>
-
-
-
-
+    <br> Picks up with Getters and Setters (Accessors and Mutators)
+    <br><br> Accessor returns a hidden attribute & Mutator can make changes
+    <br>Methods and functions often need to accept objects as arguments -- you actually pass a reference to the object, not the object itself
+    <br>Methods of the object can be called within the receiving function or method and data attributes may be changed using mutator methods.
+    <br><br> UML Diagram (Unified Modeling Language)- standard diagrams for graphically depicting object-oriented systems
+    <br>UML is a box divided into 3 sections
+    <ul>
+        <li>Top Section: name of the class</li>
+        <li>Middle Section: list of data attributes</li>
+        <li>Bottom Section: list of class methods</li>
+    </ul>
+    <br> 1st thing you want to do when developing a program is to come up with the Classes.
+    <br> you identify the real-world problems.
+    <ol>
+        <li>Get written description of the problem</li>
+        <li>Identify all nouns in the description, each of which is a potential class.</li>
+        <li>Refine the list to include only classes that are relevant to the problem</li>
+    </ol>
+    A lot of times the verbs that are used with the nouns are how you will name the methods in the class.
+    <br>A Classes Responsibilities - often this will help identify the data attributes of the class.
+    <br>the Classes's Actions are it's methods == what it is in charge of doing.
+    <br><br>moving to ex: <i>Account_module.py</i> & <i>bankApp.py</i>
 
 
     <h2>Pearson Classes and Objects Video</h2>
     <a href="https://mediaplayer.pearsoncmg.com/assets/_video.true/Classes_and_Objects">Link to Pearson Classes and Objects Video</a>
-
-
+    <br><br>learning about Classes to create Objects. Classes normally start Upper_case Objects are resources that help programs perform specific task.
+    <br> Dictionaries, Sets, and Lists are all examples of Objects
+    <ul>
+        <li><b>Lists</b> <i>mylist = [1, 2, 3, 4, 5]</i></li>
+        <li><b>Dictionaries</b> <i>phonebook = {'Chris' : '555-1111', 'John' : '666-1111', 'Sam' : '777-1111'}</i></li>
+        <li><b>Sets</b> <i>myset = set([12, 39, 46, 52, 58, 61])</i></li>
+    </ul>
+    when we use the <b><i>open</i></b> function we create a file object in memory
+    <br>ex: <i>input_file = open('data.txt', 'r')</i>
+    <br><br> starting the ex: <i>coin_demo01.py</i>
+    <br> the <b>Functions</b> or a Class are known as <b>Methods</b>. Methods are functions made to work on an Object (Instance of a Class)
 
 
 
