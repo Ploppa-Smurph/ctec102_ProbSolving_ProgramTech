@@ -1,10 +1,11 @@
 import random
 
+
 # Coin class will represent a coin that can be flipped
 
 class Coin:
 
-    # __init__ method initializes 'sideup' data to 'Heads'
+    # __init__ method initializes sideup data attribute to 'Heads'
 
     def __init__(self):
         self.sideup = 'Heads'
@@ -24,11 +25,15 @@ class Coin:
     def get_sideup(self):
         return self.sideup
 
+
 # 'main' function
 def main():
     # Create object of Coin class
     my_coin = Coin()
 
     # display the side of the coin that is facing upwards
-    print(my_coin.get_sideup(), 'is the winner of the flip')
+    my_coin.toss()
+    print('The result of the flip is ' + my_coin.get_sideup())
+
+
 main()
