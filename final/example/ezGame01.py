@@ -29,63 +29,54 @@ def player():
 #########################################################################
 realm_Set = {'Japan', 'Rome', 'Pacific', 'Portland', 'New Buenos Aires'}
 
-
+###########################################################################
+#  Move Function
+############################################################################
+def move():
+    realm = realm_Set
+    if len(realm) <= 1: 
+            realm = {'Japan', 'Rome', 'Pacific', 'Portland', 'New Buenos Aires'}
+            realm = realm.pop()
+            print('\nYou have arrived in ' + realm)
+    else: 
+            realm = realm_Set.pop()
+            print('\nYou have arrived in ' + realm)
 
 
 ######################################################################
-# Movement
+# Navigation 
 ######################################################################
+turn = 0
 while direction != 'q':
     print()
     print('\n', 'You see portals that lie to the North, South, East, and West.')
-    direction = input('\nWhich portal do you choose? "n", "s", "e", or "w"? "q" to Quit and "i" for Information')
+    direction = input('\nWhich portal do you choose? "n", "s", "e", or "w"? "q" to Quit and "i" for Information:  ')
     
     
     if direction.lower() == 'n':
-        if len(realm_Set) <= 2: 
-            realm_Set = {'Japan', 'Rome', 'Pacific', 'Portland', 'New Buenos Aires'}
-            realm = realm_Set.pop()
-            print('\nYou have arrived in ' + realm)
-        else: 
-            realm = realm_Set.pop()
-            print('\nYou have arrived in ' + realm)
-            
+        move()
+        turn += 1
+        player()
+        print('Turn #: ', turn)    
     elif direction.lower() == 's':
-        if direction: 
-            if len(realm_Set) <= 2: 
-                realm_Set = {'Japan', 'Rome', 'Pacific', 'Portland', 'New Buenos Aires'}
-                realm = realm_Set.pop()
-                print('\nYou have arrived in ' + realm)
-            else: 
-                realm = realm_Set.pop()
-                print('\nYou have arrived in ' + realm)
-        
+        move()
+        turn += 1
+        player()
+        print('Turn #: ', turn)
     elif direction.lower() == 'e':
-        if direction:
-            if len(realm_Set) <= 2: 
-                realm_Set = {'Japan', 'Rome', 'Pacific', 'Portland', 'New Buenos Aires'}
-                realm = realm_Set.pop()
-                print('\nYou have arrived in ' + realm)
-            else: 
-                realm = realm_Set.pop()
-                print('\nYou have arrived in ' + realm)
-    
+        move()
+        turn += 1
+        player()
+        print('Turn #: ', turn)  
     elif direction.lower() == 'w':
-        if direction:
-            if len(realm_Set) <= 2: 
-                realm_Set = {'Japan', 'Rome', 'Pacific', 'Portland', 'New Buenos Aires'}
-                realm = realm_Set.pop()
-                print('\nYou have arrived in ' + realm)
-            else:
-                realm = realm_Set.pop()
-                print('\nYou have arrived in ' + realm)
-    
+        move()
+        turn += 1
+        player()
+        print('Turn #: ', turn)
     elif direction.lower() == 'q':  # quit
         print('\nYou have chosen to quit the game.')
-
     elif direction.lower() == 'i':
         player()
-    
     else:
         print('\nYou have chosen an invalid direction, please choose "n", "s", "e", "w", "q", or "i".')  # invalid direction
         
