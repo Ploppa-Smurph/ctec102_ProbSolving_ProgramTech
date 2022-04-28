@@ -49,8 +49,8 @@ def move():
 turn = 0
 while direction != 'q':
     print()
-    print('\n', 'You see portals that lie to the North, South, East, and West.')
-    direction = input('\nWhich portal do you choose? "n", "s", "e", or "w"? "q" to Quit and "i" for Information:  ')
+    print('\n', 'You see portals that lie to the North, South, East, and West. Beyond each portal there flicker scenes of various lands and times, random and exotic.')
+    direction = input('\nWhich portal do you enter? "n", "s", "e", or "w"? "q" to Quit and "i" for Inventory:  ')
     
     
     if direction.lower() == 'n':
