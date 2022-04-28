@@ -132,7 +132,8 @@ while direction != 'q':
 #######################################################################################################################
 # Encounters
 #######################################################################################################################        
-    if turn == puzTimer or itemTimer or encounter:
+    if turn == puzTimer:
+    
         print('\nThere is something interesting in the  distance')            
     elif turn == itemTimer:
         print('\nThere is something of use in the distance')
